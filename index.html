@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Интернет Магазин</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Погода</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
+<div class="container">
+    <h1>Погода</h1>
+    <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Введите город..." />
+        <button id="searchBtn">Поиск</button>
+    </div>
+    <div id="loader" class="loader hidden"></div>
+    <div id="weatherData" class="weather hidden">
+        <h2 id="cityName"></h2>
+        <img id="weatherIcon" alt="Иконка погоды" />
+        <p id="temperature"></p>
+        <p id="description"></p>
+        <p id="humidity"></p>
+        <p id="wind"></p>
+    </div>
+    <p id="error" class="error"></p>
+</div>
+<script src="script.js"></script>
 </body>
 </html>

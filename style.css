@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+body.clear {
+    background: linear-gradient(to top, #fceabb, #f8b500);
+}
+body.clouds {
+    background: linear-gradient(to top, #d7d2cc, #304352);
+}
+body.rain {
+    background: linear-gradient(to top, #4e54c8, #8f94fb);
+}
+body.snow {
+    background: linear-gradient(to top, #e0eafc, #cfdef3);
+}
+body.thunderstorm {
+    background: linear-gradient(to top, #1f1c2c, #928dab);
+}
+body.drizzle {
+    background: linear-gradient(to top, #89f7fe, #66a6ff);
+}
+body.mist {
+    background: linear-gradient(to top, #c9d6ff, #e2e2e2);
+}
+
+.weather img {
+    width: 80px;
+    height: 80px;
+    margin: 10px 0;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%); /* Градиентный фон */
+    padding: 25px;
+    border-radius: 20px; /* Большие углы */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Выраженная тень */
+    text-align: center;
+    border: none; /* Убираем рамку */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Плавные анимации */
+}
+
+.container:hover {
+    transform: scale(1.03); /* Небольшое увеличение при наведении */
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15); /* Более сильная тень при наведении */
+}
+
+
+.search-box {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px 0 0 8px;
+    font-size: 16px;
+}
+
+.search-box button {
+    padding: 10px 15px;
+    border: none;
+    background: #3498db;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+}
+
+.weather {
+    margin-top: 20px;
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 20px auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.hidden {
+    display: none;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
